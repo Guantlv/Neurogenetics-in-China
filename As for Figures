@@ -1,0 +1,20 @@
+#Protein conservaton analysis for ZMIZ1 in 34 sepeices
+## The longest protein isoforms of different sepecies were downloaded from NCBI GenBank (https://www.ncbi.nlm.nih.gov/gene/), and compile the protein sequences into .fasta format.
+## The compiled fasta format sequence file was opened by MEGA11 (https://mybiosoftware.com/mega-molecular-evolutionary-genetics-analysis.html), then alligned with the integrated CLUSTALW algorithm with following parameters (Gap opening penalty and Gap extension penalty for pairwise alignment and multiple alignment were set as 10.00, 0.10 and 10.00, 0.20, respectively; the Delay divergent cutoff was 30%).
+
+# Analysis for the intrinsically disordered regions of ZMIZ1
+## The intrinsically disordered regions of ZMIZ1 protein (NP_065071) were analyzed using the online web server IUPred2A (https://iupred2a.elte.hu/) with long disorder setting to identify probable disordered regions using IUPred2 model and disordered binding regions using ANCHOR2 model.
+## The possible phosphorylation sites of ZMIZ1 were predicted by Disorder Enhanced Phosphorylation Predictor (DEEP, http://www.pondr.com/cgi-bin/depp.cgi) using 0.50 as cutoff value.
+## The evaluations of disordered regions and phosphorylation were displayed graphically.
+
+# Expression of ZMIZ1 
+## The expression data of ZMIZ1 was downloaded from the Dataset of GeneAtlas U133A, gcrma (http://biogps.org/dataset/GSE1133/) with probeset 212124_at which was compiled in the BIOGPS database (http://biogps.org/#goto=genereport&id=57178).
+## The mean and standard deviation was calculated for the probe intensity in each tissues and displayed graphically.
+
+# For Structure prediction of ZMIZ1
+## The Structure prediction for the protein sequence of ZMIZ1 was predicted by I-TASSER (https://zhanggroup.org/I-TASSER/) and viewed by Mol* 3D Viewer (https://www.pdbus.org/3d-view). 
+
+# Protein network analysis
+## STRING was used to carry out the protein network analysis (https://string-db.org/).The Protein names of interest were put in the List Of Names in Multiple Proteins mode with organism as Homo sapiens. The settings were listed below: physical subnetwork (Network type), confidence (meanning of network edges), Textming and Experiments (active interaction sources), 1st shell less than 10 (max number of interactions to show).
+## Clustering were carried out by the integrated kmeans clustering algorithm with number of clusters setted at 3.
+## The functional analysis of the members of the network were downloaded from "Biological Processes", "Molecular Function", "Cellular Component " and "Subcellular Localization" according to false discovery rate (FDR) and displayed graphically.
