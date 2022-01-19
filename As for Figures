@@ -1,3 +1,12 @@
+# The clean Whole Exome Sequencing data for the trio (Proband, Father and Mother) could be downlaoded from the Genome Sequence Archive (GSA) for Human of National Genomics Data Center (HNGD) with accession number of HRA001841 (https://bigd.big.ac.cn/gsa-human/browse/HRA001841).
+## The “clean reads” derived from targeted sequencing and filtering were then aligned to the human genome reference (hg19) using the BWA (Burrows Wheeler Aligner) Multi-Vision software package(0.7.17) (http://bio-bwa.sourceforge.net/) and samtools(1.10) (http://samtools.sourceforge.net/). 
+## After alignment, the output files were used to perform sequencing coverage and depth analysis of the target region, single-nucleotide variants (SNVs) and INDEL calling. We used GATK software(4.1.9.0) to detect SNVs and indels (https://github.com/broadinstitute/gatk/releases/download/4.2.4.1/gatk-4.2.4.1.zip). 
+## All SNVs and indels were filtered and estimated via multiple databases, including NCBI dbSNP,1000 human genome dataset(phase3),ClinVar(2020-03-16),ESP6500(V2), GnomAD (r2.0.1), ExAC(r0.3.1). 
+## To predict the effect of missense variants, we used dbNSFP (http://database.liulab.science/dbNSFP), which contains seven well-established in silico prediction programs (Scale-Invariant Feature Transform [SIFT], Polyphen2, LRT, MutationTaster, and PhyloP). 
+## To analyse the variants near the splicing sites,we use SpliceAI (https://github.com/Illumina/SpliceAI) for prediction.
+
+
+
 #Protein conservaton analysis for ZMIZ1 in 34 sepeices
 ## The longest protein isoforms of different sepecies were downloaded from NCBI GenBank (https://www.ncbi.nlm.nih.gov/gene/), and compile the protein sequences into .fasta format.
 ## The compiled fasta format sequence file was opened by MEGA11 (https://mybiosoftware.com/mega-molecular-evolutionary-genetics-analysis.html), then alligned with the integrated CLUSTALW algorithm with following parameters (Gap opening penalty and Gap extension penalty for pairwise alignment and multiple alignment were set as 10.00, 0.10 and 10.00, 0.20, respectively; the Delay divergent cutoff was 30%).
