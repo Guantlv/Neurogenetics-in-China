@@ -1,0 +1,6 @@
+#References
+1. Wei X, Ju X, Yi X, et al. Identification of sequence variants in genetic diseasecausing genes using targeted next-generation sequencing. PLoS One 2011;6:e29500.
+2. Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: 19451168]
+3. McKenna A, Hanna M, Banks E, Sivachenko A, Cibulskis K, Kernytsky A, Garimella K, Altshuler D, Gabriel S, Daly M, DePristo MA. The Genome Analysis Toolkit: a MapReduce framework for analyzing next-generation DNA sequencing data. GENOME RESEARCH. 2010.20:1297-303.
+4. F. Anthony San Lucas, Gao Wang, Paul Scheet, and Bo Peng (2012) Integrated annotation and analysis of genetic variants from next-generation sequencing studies with variant tools, Bioinformatics 28 (3): 421-422.
+5. Richards S, Aziz N, Bale S, et al. Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genet Med. 2015 May;17(5):405-24. doi: 10.1038/gim.2015.30. Epub 2015 Mar 5.
