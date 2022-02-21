@@ -1,0 +1,12 @@
+
+SOAPnuke filter -o $sample_path/filter1 --fq1 $fq1 --cleanFq1 pe11_filter.fq.gz --fq2 $fq2 -cleanFq2 pe12_filter.fq.gz --nRate 0.05 --lowQual 10  --seqType 0 --qualRate 0.5 -Q 2 -G 2
+
+bwa mem -K 100000000 -t 36 -M -Y -R "@RG\tID:$sample_name\tSM:$sample_name\tLB:L01\tPL:COMPLETE" hg19.fa $sample_path/filter1/pe11_filter.fq.gz $sample_path/filter1/pe12_filter.fq.gz|samtools view -S -h -b --threads 3 -o $sample_path/bwa/$sample_name.raw_1.bam
+
+gatk MarkDuplicates -I $sample_path/bwa/$sample_name.merge.bam -O $sample_path/bwa/$sample_name.dup.bam -M $sample_path/bwa/$sample_name.dup.metrics
+
+gatk BaseRecalibrator -R hg19.fq -I $sample_path/bwa/$sample_name.dup.bam -known-sites dbsnp_138.hg19.vcf -known-sites Mills_and_1000G_gold_standard.indels.hg19.sites.vcf -O $sample_path/bwa/$sample_name.recal_data.grp
+
+gatk ApplyBQSR -R hg19.fq -I $sample_path/bwa/$sample_name.dup.bam -O $sample_path/bwa/$sample_name.final.bam -bqsr $sample_path/bwa/$sample_name.recal_data.grp
+
+gatk HaplotypeCaller -R hg19.fq -I $sample_path/bwa/$sample_name.final.bam -O $sample_path/gatk/$sample_name.vcf
